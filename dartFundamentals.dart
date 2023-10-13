@@ -4,7 +4,7 @@ void main() {
 
 /**
 PART 1: 
-Dart Basics (45 minutes)
+Dart Basics 
 Variables and Data Types (int, double, String, bool).
 Operators (arithmetic, comparison, logical).
 Control Structures (if statements, loops - for, while).
@@ -20,17 +20,35 @@ Control Structures (if statements, loops - for, while).
    * dynamic -> not sure what it will be ( we can change at run time)
    * const - immutable 
    * final - single assignment at runtime
+   * Numbers | Strings | Booleans  | Lists(Arrays) | Maps(key-value pairs) | Dynamic
    * -> Naming Aproach -> CamelCase
    */
- 
-  //string concatenation
-  //print("My name is $firstName. I am $age years old. \nMy vehicle is color $color");
 
-  /**
-   * Primitive DATA TYPES - often predefined
-   * Numbers | Strings | Booleans  | Lists(Arrays) | Maps(key-value pairs) | Dynamic
-   * 
-   */
+/** PROBLEM 1 */
+/**
+Challenge Description: Variable Swap
+
+Write a Dart program that swaps the values of two variables without using a third variable.
+
+Requirements:
+
+Declare two variables, var1 and var2, and assign any initial values to them.
+Swap the values of var1 and var2 without using a third variable.
+Print the values of var1 and var2 before and after the swap to verify the results. 
+
+Your output should be: "Before the Swap, var1 was {var!} and var2 was {var2} after the swap var1 is {var1} and var2 is {var2}"
+use any for of string concatenation technique.
+
+eg Before Swapping : 
+var1 = 10; var2 =5
+After Swapping : 
+var1 = 5 ; var2 = 10;
+*/  
+
+
+
+/**----------------------------------------------------------------------------------------------------- */
+ 
 
 // NON PRIMITIVE DATA TYPES ( complex in nature such as objects ) - mostly created by the developer
       /**
@@ -47,21 +65,21 @@ Control Structures (if statements, loops - for, while).
      * insert(position, element)
      */ 
 
-   /**
- * MAPS
- * create -> var map ={key:value,}
- * Show =>  print(map), print(map[key])
- * keys => print(map.keys)
- * values => print(map.values)
- * length => map.length
- * add => map[newKey] = newValue
- * add many => map.addAll({key:value, key:value}) 
- * remove all> map.clear()
- * remove one => map.clear(key)
- * 
- */
+     /**
+      * MAPS
+      * create -> var map ={key:value,}
+      * Show =>  print(map), print(map[key])
+      * keys => print(map.keys)
+      * values => print(map.values)
+      * length => map.length
+      * add => map[newKey] = newValue
+      * add many => map.addAll({key:value, key:value}) 
+      * remove all> map.clear()
+      * remove one => map.clear(key)
+      * 
+      */
 
-//   var student = {
+//   Map student = {
 //     "Name": "Ericsson Lab",
 //     "Age": 10,
 //     "Location": "Strathmore",
@@ -85,15 +103,51 @@ Control Structures (if statements, loops - for, while).
 // addition
 // division
 // multiplication
- 
-/** CREATE MINI CALCULATOR  */
 
+/** PROBLEM 2 */
+/** 
+CHALLENGE Description: Sales Report
+
+Imagine you are working for a company that sells products in 
+different countries. You have been given a list of sales data in 
+the form of a list of maps. Each map represents the sales data for 
+a specific product and contains the following information:
+
+"product": the name of the product (string).
+"price": the price of the product (double).
+"quantity": the quantity sold (int).
+"country": the country where the product was sold (string).
+Your task is to calculate and display the total sales and average price per product for each country. Write a Dart program that takes a list of sales data as input and outputs the total sales and average price per product for each country.
+List<Map<String, dynamic>> salesData = [
+  {"product": "A", "price": 10.0, "quantity": 5, "country": "USA"},
+  {"product": "B", "price": 8.0, "quantity": 3, "country": "Canada"},
+  {"product": "A", "price": 10.0, "quantity": 7, "country": "USA"}, 
+];
+*/
+
+
+/** ---------------------------------------------------------------------------------------------------- */
+
+/**----------------------------------------------------------------------------------------------------- */
+ 
+/**----------------------------------------------------------------------------------------------------- */
+ 
 
 
 // Type casting ( convetrting from one data typoe to another ) -> probable format exception
 // string to integer -> int.parse('1')
 // integer to string -> {value}.toString();
 // string to double -> double.parse('2.2')
+
+
+/** ---------------------------------------------------------------------------------------------------- */
+
+/**----------------------------------------------------------------------------------------------------- */
+ 
+/**----------------------------------------------------------------------------------------------------- */
+ 
+
+
 
 /************************* PART 2 ************************** */
 
@@ -121,8 +175,33 @@ Iterating through collections using loops.
    * as well 
 * */
 
+/** PROBLEM 3 */
+
+/**
+  CHALLENGE: 
+  hvaing the lists below: 
+  List<Map<String, dynamic>> salesData = [
+  {"product": "A", "price": 10.0, "quantity": 5, "country": "USA"},
+  {"product": "B", "price": 8.0, "quantity": 3, "country": "Canada"},
+  {"product": "A", "price": 10.0, "quantity": 7, "country": "USA"}, 
+
+  loop through each list and printout the following: 
+  1. product
+  2. country
+  3. price
+
+  calculate the total money based on the price and quantity of the whole list;
+
+];
 
 
+/** ---------------------------------------------------------------------------------------------------- */
+
+/**----------------------------------------------------------------------------------------------------- */
+ 
+/**----------------------------------------------------------------------------------------------------- */
+ 
+ */
 /************************* PART 3 ************************** */
 
 
@@ -133,30 +212,41 @@ Functions (declaration, parameters, return types).
 Object-Oriented Concepts (classes, objects, constructors).
 Inheritance and Polymorphism.
  */
+/**
+   * FUNCTIONS (parameterized and non parameterized)
+   * functionName(){}
+   * functionName(var x)
+*/
 
-// classes
-// class Person{
-//     String name;
-//     int age; 
+/**
+   * DISCRETE 
+   * && , ||, ! , == 
+   * truth tables 
+*/
+/** 
+classes
+class Person{
+    String name;
+    int age; 
 
-//     // function within a class is clalled a method
-//     void showOutput(){
-//         print(name);
-//         print(age);
-//     }
+    // function within a class is clalled a method
+    void showOutput(){
+        print(name);
+        print(age);
+    }
     
-//     // constructor -> method  , automatically called when you instantiate a class
-//     Person(String name, [int age =18]){
-//         this.name = name;
-//         this.age = age;
-//     } 
-//     //OR
-//     Person(this.name,[this.age =18])
+    // constructor -> method  , automatically called when you instantiate a class
+    Person(String name, [int age =18]){
+        this.name = name;
+        this.age = age;
+    } 
+    //OR
+    Person(this.name,[this.age =18])
 
-// named constructor
-// Person.guest(){name = 'Nom'; age=19;}
-// }
-
+named constructor
+Person.guest(){name = 'Nom'; age=19;}
+}
+**/ 
 // void main(){
 //     Person junior = Person(); // approach 1
 //     var junior2 = Person() // approach 2
@@ -180,17 +270,7 @@ Inheritance and Polymorphism.
 //     number = num ??= 0 ; // checks if value is not null and returns 0 if true else not give default value zero
 // }
 
-/**
-   * FUNCTIONS (parameterized and non parameterized)
-   * functionName(){}
-   * functionName(var x)
-*/
 
-/**
-   * DISCRETE 
-   * && , ||, ! , == 
-   * truth tables 
-*/
   // no  parameterized function
    greeting(){
      print("Good Afternoon");
@@ -250,11 +330,61 @@ void verify(var val){
 }
 
 /************************* PART 5 ************************** */
-  /**CHALLENGE
-   * 
-   * Print numbers 1 to 100
-   * fizz buzz 
-   * https://www.hackerrank.com/challenges/fizzbuzz/problem
-   */
 
+ /**
+  
+  CHALLENGE 1 : Simple Calculator  build
+
+*/
+
+/**
+  
+  CHALLENGE 2: 
+   
+   Description: Bookstore Inventory Management
+
+You are tasked with creating a bookstore inventory management system. Implement the following:
+
+Book Class:
+
+Create a Dart class called Book with the following properties:
+
+title (String): the title of the book.
+author (String): the author of the book.
+price (double): the price of the book.
+quantity (int): the quantity of the book in stock.
+Implement a  parameterized constructor to initialize the properties.
+
+Implement a method displayInfo() that prints the book's information in the following format:
+
+ 
+Title: [title]
+Author: [author]
+Price:  [price]
+Quantity in Stock: [quantity]
+Inventory Management:
+
+Create a list of Book objects representing the bookstore's inventory.
+Implement a function addBook(Book book) that adds a new book to the inventory.
+Implement a function removeBook(String title) that removes a book from the inventory based on its title.
+Implement a function displayInventory() that displays the information of all books in the inventory using the displayInfo() method of the Book class.
+Sales and Restocking:
+
+Implement a function sellBook(String title, int quantity) that simulates selling a certain quantity of a book. Update the quantity in stock accordingly.
+Implement a function restockBook(String title, int quantity) that simulates restocking a certain quantity of a book. Update the quantity in stock accordingly.
+
+*/
+
+
+
+/** ---------------------------------------------------------------------------------------------------- */
+
+/**------------------------------------------ ASSIGNMENT ----------------------------------------------- */
+ 
+/**----------------------------------------------------------------------------------------------------- */
+ /*
+  1. Read and write two articles based on :
+  -> Introduction to Flutter ( include the architecture )
+  -> Classes & Objects ( start here:'https://dart.dev/language/classes' ), Concurrency (start here: 'https://dart.dev/language/async') and Null Safety (start here: 'https://dart.dev/null-safety') 
+*/
 }
