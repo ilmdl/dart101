@@ -45,7 +45,16 @@ After Swapping :
 var1 = 5 ; var2 = 10;
 */  
 
+// Create variables
+int x = 10;
+int y = 5;
+print('x=$x y=$y');
 
+// Flip varaibles
+x = x + y;
+y = x - y;
+x = x - y;
+print('x=$x y=$y');
 
 /**----------------------------------------------------------------------------------------------------- */
  
@@ -314,10 +323,10 @@ int greaterThanZero(int val){
 }
 
 void verify(var val){
-    val valueVerification
+    // val valueVerification
 // test
     try{
-        valueVerification =greaterThanZero(val);
+        int valueVerification =greaterThanZero(val);
     }
 // catch error
     catch(e){
