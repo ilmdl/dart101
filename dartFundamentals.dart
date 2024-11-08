@@ -45,7 +45,16 @@ After Swapping :
 var1 = 5 ; var2 = 10;
 */  
 
+// Create variables
+int x = 10;
+int y = 5;
+print('x=$x y=$y');
 
+// Flip varaibles
+x = x + y;
+y = x - y;
+x = x - y;
+print('x=$x y=$y');
 
 /**----------------------------------------------------------------------------------------------------- */
  
@@ -125,6 +134,26 @@ List<Map<String, dynamic>> salesData = [
 ];
 */
 
+CalcData(List listMaps) {
+  Map<String, dynamic> totalMeanData = {};
+  List<String> countryNames = [];
+  for (Map sale in listMaps) {
+    if (totalMeanData.containsKey("${sale['country']}mean")) {
+      totalMeanData["${sale['country']}total"] = totalMeanData["${sale['country']}total"]! + sale['price'];
+      totalMeanData["${sale['country']}mean"] = totalMeanData["${sale['country']}mean"]! + 1;
+    } else {
+      countryNames.add(sale['country']);
+      totalMeanData["${sale['country']}mean"] = 1;
+      totalMeanData["${sale['country']}total"] = sale['price'];
+    }
+  }
+  
+  for (var country in countryNames) {
+    totalMeanData["${country}mean"] =
+        totalMeanData['${country}total']! / totalMeanData['${country}mean']!;
+  }
+  print(totalMeanData);
+}
 
 /** ---------------------------------------------------------------------------------------------------- */
 
@@ -314,10 +343,10 @@ int greaterThanZero(int val){
 }
 
 void verify(var val){
-    val valueVerification
+    // val valueVerification
 // test
     try{
-        valueVerification =greaterThanZero(val);
+        int valueVerification =greaterThanZero(val);
     }
 // catch error
     catch(e){
