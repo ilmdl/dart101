@@ -155,6 +155,23 @@ CalcData(List listMaps) {
   print(totalMeanData);
 }
 
+  List<Map<String, dynamic>> salesData = [
+    {"product": "A", "price": 30.0, "quantity": 5, "country": "USA"},
+    {"product": "A", "price": 30.0, "quantity": 5, "country": "USA"},
+    {"product": "B", "price": 6.0, "quantity": 3, "country": "Canada"},
+    {"product": "B", "price": 7.0, "quantity": 3, "country": "Canada"},
+    {"product": "B", "price": 8.0, "quantity": 3, "country": "Canada"},
+    {"product": "B", "price": 6.0, "quantity": 3, "country": "Canada"},
+    {"product": "B", "price": 7.0, "quantity": 3, "country": "Canada"},
+    {"product": "B", "price": 8.0, "quantity": 3, "country": "Canada"},
+    {"product": "A", "price": 10.0, "quantity": 7, "country": "USA"},
+    {"product": "A", "price": 20.0, "quantity": 7, "country": "USA"},
+    {"product": "A", "price": 10.0, "quantity": 7, "country": "USA"},
+    {"product": "A", "price": 20.0, "quantity": 7, "country": "USA"},
+  ];
+
+  CalcData(salesData);
+
 /** ---------------------------------------------------------------------------------------------------- */
 
 /**----------------------------------------------------------------------------------------------------- */
