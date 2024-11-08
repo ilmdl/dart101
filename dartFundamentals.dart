@@ -175,6 +175,21 @@ Iterating through collections using loops.
    * as well 
 * */
 
+  List<int> marks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11, 11, 11, 11, 11, 11, 12, 13, 14, 15, 16, 17, 18, 19];
+  int evenNumbers = 0;
+  int oddNumbers = 0;
+  for (int mark in marks)
+    if (mark % 2 == 0) {
+      evenNumbers += 1;
+      print('even $mark');
+    } else {
+      oddNumbers += 1;
+      print("odd $mark");
+    }
+  print("number of even $evenNumbers");
+  print("number of odd $oddNumbers");
+
+
 /** PROBLEM 3 */
 
 /**
@@ -314,10 +329,10 @@ int greaterThanZero(int val){
 }
 
 void verify(var val){
-    val valueVerification
+    // val valueVerification
 // test
     try{
-        valueVerification =greaterThanZero(val);
+        int valueVerification =greaterThanZero(val);
     }
 // catch error
     catch(e){
